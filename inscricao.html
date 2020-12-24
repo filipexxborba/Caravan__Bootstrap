@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Aprendendo Bootstrap 5 - Filipe Borba</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLoginLabel">Entre na sua conta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <button type="submit" class="btn btn-primary">Entrar na Conta</button><br>
+              <small class="form-text text-muted">
+                Esqueceu a senha? <a href="#" class="text-primary">Clique aqui</a>.
+              </small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar shadow rounded fixed-top navbar-expand-md navbar-light bg-light py-3 align-items-center">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/caravan.svg" alt="Caravan">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+                <ul class="navbar-nav align-items-md-center ms-auto">
+                    <div class="dropdown">
+                        <button class="nav-item dropdown-toggle p-0 py-1 p-md-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                          Locais
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <li><a class="dropdown-item" href="./local.html">California</a></li>
+                          <li><a class="dropdown-item" href="./local.html">Paris</a></li>
+                          <li><a class="dropdown-item" href="./local.html">Dublin</a></li>
+                        </ul>
+                      </div>
+                    <li class="nav-item">
+                        <a href="planos.html" class="nav-link">Planos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
+                    </li>
+                    <li class="nav-item ms-md-5">
+                        <a href="inscricao.html" class="btn btn-lg btn-outline-primary active">Inscreva-se</a>
+                    </li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+
+    <section class="container">
+        <div class="text-center my-5">
+            <span class="h6 d-block text-uppercase fw-bold">Programe a viagem do seu sonho</span>
+            <h1 class="display-4 text-primary">Inscreva-se</h1>
+            
+            <div class="row text-start">
+              <form action="" class="col-lg-6">
+                <div class="row">
+                  <div class="col-md">
+                    <label for="inputNome" class="form-label my-2">Nome</label>
+                    <input type="text" id="inputNome" class="form-control" placeholder="Nome completo" aria-label="Nome completo">
+                  </div>
+                  <div class="col-md">
+                    <label for="inputCPF" class="form-label my-2">CPF</label>
+                    <input type="text" id="inputCPF" class="form-control" placeholder="xxx.xxx.xxx-xx" aria-label="Digite seu cpf">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md">
+                    <label for="inputEmail" class="form-label my-2">Email</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="exemplo@exemplo.com" aria-label="Email">
+                  </div>
+                  <div class="col-md">
+                    <label for="inputSenha" class="form-label my-2">Senha</label>
+                    <input type="password" id="inputSenha" class="form-control" placeholder="Digite sua senha" aria-label="Digite sua senha">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <label for="inputEndereco" class="form-label my-2">Endereço</label>
+                    <input type="text" id="inputEndereco" class="form-control" placeholder="Número, nome da rua e bairro" aria-label="Endereço completo">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="inputEmail" class="form-label my-2">Cidade</label>
+                    <input type="email" id="inputCidade" class="form-control" aria-label="Cidade">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="inputEstado" class="form-label my-2">Estado</label>
+                    <select id="inputEstado" class="form-select">
+                      <option selected>Selecione...</option>
+                      <option>PR</option>
+                      <option>SC</option>
+                      <option>RS</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 my-2">
+                    <label for="inputZip" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="inputZip" placeholder="99999-999">
+                  </div>
+                </div>
+
+                <div class="bg-light rounded shadow-sm p-3 form-group my-3 my-lg-0 animate-init" data-anime="scroll">
+                  <h2 class="text-primary text-uppercase h6">Forma de pagamento</h2>
+
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active btn btn-secondary btn-sm rounded-0" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Cartão de Crédito</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link btn btn-secondary btn-sm rounded-0" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Boleto Bancário</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                      <!-- Cartão de Crédito -->
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="inputNomeCartao" class="form-label my-2">Nome no Cartão</label>
+                          <input type="text" id="inputNomeCartao" class="form-control" aria-label="Nome impresso no cartão" placeholder="Nome impresso no cartão">
+                        </div>
+                        <div class="col-md-3">
+                          <label for="inputMes" class="form-label my-2">Mês</label>
+                          <input type="number" id="inputMes" class="form-control" aria-label="Expira mês" placeholder="Expira mês...">
+                        </div>
+                        <div class="col-md-3">
+                          <label for="inputAno" class="form-label my-2">Ano</label>
+                          <input type="number" class="form-control" id="inputAno" placeholder="Expira ano...">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="inputNumeroCartao" class="form-label my-2">Número do Cartão</label>
+                          <input type="text" id="inputNumeroCartao" class="form-control" placeholder="5555 5555 5555 5555" aria-label="Número do cartão">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputSecCode" class="form-label my-2">Código de Segurança</label>
+                          <input type="text" id="inputSecCode" class="form-control" placeholder="xxx" aria-label="Digite o número de segurança">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      <h2 class="text-muted h6">Clique em contratar plano e enviaremos para o seu e-mail o boleto bancário.</h2>
+                    </div>
+                  </div>
+                  
+              </form>
+            </div>
+            <div class="col-md">
+              <div class="bg-light rounded p-3 shadow-sm animate-init" data-anime="scroll">
+              <h2 class="text-primary text-uppercase h6">Plano Selecionado</h2>
+               <h2 class="my-3">Platinum</h2>
+               <ul class="list-unstyled bg-light">
+                   <li class="my-3 p-2 lead" data-bs-toggle="tooltip" data-bs-placement="top" title="Isso mesmo, 30 dias de viagens">&#10132; 60 dias de viagem</li>
+                   <div class="dropdown-divider"></div>
+                   <li class="my-3 p-2 lead">&#10132; 6 destinos diferentes</li>
+                   <div class="dropdown-divider"></div>
+                   <li class="my-3 p-2 lead">&#10132; Tudo pago pela empresa</li>
+                   <div class="dropdown-divider"></div>
+                   <li class="my-3 p-2 lead">&#10132; Ingressos para festas</li>
+      
+                   <select class="form-select form-select-sm p-3" aria-label=".form-select-sm example" style="font-size: 18px;">
+                       <option selected>Selecione a Cidade</option>
+                       <option value="1">Califórnia</option>
+                       <option value="2">Paris</option>
+                       <option value="3">Dublin</option>
+                   </select>
+                   <div class="row align-items-center mt-3">
+                       <div class="col-6">
+                           <p class="fw-bold h3">R$12.500</p>
+                       </div>
+                   </div>
+               </ul>
+            </div>
+       </div>
+       <div class="form-check my-3 mx-2 animate-init" data-anime="scroll">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          <strong>Concordo com os <a href="#" class="text-primary">Termos e Condições</a>.</strong>
+        </label>
+      </div>
+      <a href="#" class="btn btn-primary col-5 col-sm-3 mx-2 animate-init" data-anime="scroll">Contratar Plano</a>
+       
+       
+    </section>
+    
+    <footer class="bg-dark text-white py-2 py-sm-0 mt-0">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <h4 class="h6 text-uppercase">Páginas</h4>
+            <ul class="list-unstyled">
+              <li><a href="planos.html" class="text-decoration-none">Planos</a></li>
+              <li><a href="contato.html " class="text-decoration-none">Contato</a></li>
+              <li><a href="inscricao.html" class="text-decoration-none">Inscreva-se</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h4 class="h6 text-uppercase">Locais</h4>
+            <ul class="list-unstyled">
+              <li><a href="local.html" class="text-decoration-none">Califórnia</a></li>
+              <li><a href="local.html " class="text-decoration-none">Paris</a></li>
+              <li><a href="local.html" class="text-decoration-none">Dublin</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4">
+            <h4 class="h6 text-uppercase">Dados de contato</h4>
+            <ul class="list-unstyled text-secondary">
+              <li>caravan@caravan.com.br</li>
+              <li>45 9 9999-9999</li>
+              <li>De Seg. à Sex. das 8h às 17h</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2">
+            <h4 class="h6 text-uppercase">Redes sociais</h4>
+            <ul class="list-unstyled">
+              <li><a href="https:/github.com/filipexxborba" target="_blank" class="btn btn-sm btn-outline-secondary min-wid my-1" style="max-width: 140px;">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/borba-filipe/" target="_blank" class="btn btn-sm btn-outline-secondary min-wid my-1" style="max-width: 140px;">Linkedin</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary text-center py-3 fw-bold">
+        <p class="mb-0">Filipe Borba &copy; 2020. Projeto desenvolvido em Bootstrap 5 para treino.</p>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="https://unpkg.com/@popperjs/core@2"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
